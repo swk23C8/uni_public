@@ -16,9 +16,9 @@ namespace test {
                 Generations = 0;
             }
 
-            public LifeGame(int rows,
-                int cols) {
-                Environment = new bool[rows, cols];
+            public LifeGame(int row,
+                int col) {
+                Environment = new bool[row, col];
                 Generations = 0;
             }
 
@@ -27,46 +27,18 @@ namespace test {
                 int col) {
                 int neighbours = 0;
 
+                int maxRow = generation.Environment.GetLength(0);
+                int maxCol = generation.Environment.GetLength(1);
+                for (int r = row - 1; r <= row + 1; r++) {
+                    for (int c = col - 1; c <= col + 1; c++) {
+                        if (r < 0 || r >= maxRow || c < 0 || c >= maxCol) {
+                            continue;
+                        }
 
-                // Above
-                if (generation.Environment[row - 1, col]) {
-                    neighbours++;
-                }
-
-                // Below
-                if (generation.Environment[row + 1, col]) {
-                    neighbours++;
-                }
-
-                // Left
-                if (generation.Environment[row, col - 1]) {
-                    neighbours++;
-                }
-
-
-                // Right
-                if (generation.Environment[row, col + 1]) {
-                    neighbours++;
-                }
-
-                // Diagonal Above and Left
-                if (generation.Environment[row - 1, col - 1]) {
-                    neighbours++;
-                }
-
-                // Diagonal Below and Right
-                if (generation.Environment[row + 1, col - 1]) {
-                    neighbours++;
-                }
-
-                // Diagonal Above and Right
-                if (generation.Environment[row - 1, col + 1]) {
-                    neighbours++;
-                }
-
-                // Diagonal Below and Left
-                if (generation.Environment[row + 1, col + 1]) {
-                    neighbours++;
+                        if (!(r == row && c == col)) {
+                            neighbours++;
+                        }
+                    }
                 }
 
                 return neighbours;
@@ -106,16 +78,14 @@ namespace test {
                     Console.WriteLine();
                 }
 
-                Console.SetCursorPosition(0, Console.WindowTop);
+//                Console.SetCursorPosition(0, Console.WindowTop);
             }
 
             public static bool[,] CreateRandom2dArray(Random rng,
                 int minValue,
                 int maxValue) {
-                //int row = rng.Next(3, 40);
-                //int col = rng.Next(3, 40);
-                int row = 40;
-                int col = 90;
+                int row = 20;
+                int col = 50;
                 bool[,] start = new bool[row, col];
                 for (int i = 0; i < row; i++) {
                     for (int j = 0; j < col; j++) {
@@ -135,13 +105,15 @@ namespace test {
                 Console.WriteLine("Number of generations: " + gen);
 
                 for (int i = 0; i < gen; i++) {
-                    //System.Threading.Thread.Sleep(500);
+                    Console.Clear();
+                    System.Threading.Thread.Sleep(200);
                     Console.WriteLine("Generation Number: " + i);
                     bool[,] generation = life.FindNextGeneration(life);
                     Print2DArray(generation);
                     life.Environment = generation;
                     life.Generations = life.Generations++;
                     Console.WriteLine("\n");
+                    System.Threading.Thread.Sleep(200);
                 }
             }
         }
