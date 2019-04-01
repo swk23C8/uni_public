@@ -73,23 +73,26 @@ namespace test {
                 for (int i = 0; i < matrix.GetLength(0); i++) {
                     for (int j = 0; j < matrix.GetLength(1); j++) {
                         Console.Write(matrix[i, j] ? "#" : ".");
+//                        if (j == matrix.GetLength(1) - 1) Console.WriteLine("\r");
                     }
 
                     Console.WriteLine();
                 }
-
 //                Console.SetCursorPosition(0, Console.WindowTop);
             }
 
             public static bool[,] CreateRandom2dArray(Random rng,
                 int minValue,
                 int maxValue) {
-                int row = 20;
-                int col = 50;
+ 
+                int row = 5;
+                int col = 5;
                 bool[,] start = new bool[row, col];
-                for (int i = 0; i < row; i++) {
-                    for (int j = 0; j < col; j++) {
+                for (int i = 0; i < start.GetLength(0); i++) {
+                    for (int j = 0; j < start.GetLength(1); j++) {
                         start[i, j] = ((rng.Next(2) == 0) ? false : true);
+                        Console.WriteLine(start[i, j]);
+//                        Console.ReadLine();
                     }
                 }
 
@@ -101,11 +104,12 @@ namespace test {
                 Random rng = new Random();
                 bool[,] startingEnv = CreateRandom2dArray(rng, 0, 2);
                 LifeGame life = new LifeGame(startingEnv);
-                int gen = rng.Next(1, int.MaxValue);
+//                int gen = rng.Next(1, int.MaxValue);
+                int gen = 100;
                 Console.WriteLine("Number of generations: " + gen);
 
                 for (int i = 0; i < gen; i++) {
-                    Console.Clear();
+//                    Console.Clear();
                     System.Threading.Thread.Sleep(200);
                     Console.WriteLine("Generation Number: " + i);
                     bool[,] generation = life.FindNextGeneration(life);
