@@ -1,0 +1,14 @@
+C:\Users\Admin\Documents\projects\pst1\pst1\obj\Debug\pst1.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\projects\pst1\pst1\obj\Debug\pst1.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\projects\pst1\pst1\bin\Debug\pst1.exe.config
+C:\Users\Admin\Documents\projects\pst1\pst1\bin\Debug\pst1.exe
+C:\Users\Admin\Documents\projects\pst1\pst1\bin\Debug\pst1.pdb
+C:\Users\Admin\Documents\projects\pst1\pst1\obj\Debug\pst1.exe
+C:\Users\Admin\Documents\projects\pst1\pst1\obj\Debug\pst1.pdb
+D:\projects\pst1\pst1\bin\Debug\pst1.exe.config
+D:\projects\pst1\pst1\bin\Debug\pst1.exe
+D:\projects\pst1\pst1\bin\Debug\pst1.pdb
+D:\projects\pst1\pst1\obj\Debug\pst1.csprojAssemblyReference.cache
+D:\projects\pst1\pst1\obj\Debug\pst1.csproj.CoreCompileInputs.cache
+D:\projects\pst1\pst1\obj\Debug\pst1.exe
+D:\projects\pst1\pst1\obj\Debug\pst1.pdb

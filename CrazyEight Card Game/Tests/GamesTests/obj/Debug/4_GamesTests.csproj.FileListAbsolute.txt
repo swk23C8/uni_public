@@ -1,0 +1,2 @@
+C:\Users\Ryu\Downloads\Card_Games_-_Initial_Code-3\Card Games - Initial Code-3\Tests\GamesTests\obj\Debug\4_GamesTests.csprojAssemblyReference.cache
+C:\Users\Ryu\Downloads\Card_Games_-_Initial_Code-3\Card Games - Initial Code-3\Tests\GamesTests\obj\Debug\4_GamesTests.csproj.CoreCompileInputs.cache
